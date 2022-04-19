@@ -1,6 +1,3 @@
-from heapq import nlargest
-
-
 class MaxHeap:
     def __init__(self):
         self.heap_list = []
@@ -55,4 +52,5 @@ class MaxHeap:
         return element
 
     def find_n_max(self, n):
+        from heapq import nlargest
         return nlargest(n, self.heap_list)[-1]

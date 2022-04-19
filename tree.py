@@ -1,10 +1,3 @@
-class Node:
-    def __init__(self, key=None):
-        self.key = key
-        self.left: Node | None = None
-        self.right: Node | None = None
-
-
 def read_tree() -> list[Node]:
     file = open('input.txt')
     k = int(file.readline())
@@ -17,6 +10,13 @@ def read_tree() -> list[Node]:
         if right != -1:
             node.right = tree[right]
     return tree
+
+
+class Node:
+    def __init__(self, key=None):
+        self.key = key
+        self.left: Node | None = None
+        self.right: Node | None = None
 
 
 def in_order(root: Node):
